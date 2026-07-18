@@ -2,6 +2,7 @@
 
 - Never use bold text inside resume bullet points.
 - Never use Unicode U+2014 in authored or generated project content; use a comma, colon, semicolon, or ASCII hyphen instead.
+- Use `AI APIs` or `AI SDKs` in resume-facing wording instead of specific foundation-model names or versions.
 - For QA orchestration, read `qa/resume-qa/SKILL.md`. An explicitly invoked `resume-*-clean` evaluator follows only its own isolation skill.
 - Run every clean semantic evaluator in a new top-level Codex task. Never use subagents, forks, or a previously used evaluator task.
 - Tailoring scouts use new top-level `gpt-5.6-terra` tasks with `xhigh`; the global Resume Composer uses a new top-level `gpt-5.6-sol` task with `high`.

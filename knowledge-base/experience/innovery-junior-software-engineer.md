@@ -55,6 +55,8 @@ linkedin_employer_date_conflict: Profile groups internship and 2023-08 to 2025-0
 - For Applied AI roles, prioritize the RAG support assistant, mortgage and loan
   LLM workflow, and the production reliability outcome from the internal
   ProcessMaker platform over a standalone SOAR entry.
+- In resume-facing wording, describe model integrations as `AI APIs` or `AI
+  SDKs` rather than naming a specific model or version.
 - The SOAR work remains valid evidence and should be selected when cybersecurity
   or security-automation relevance justifies it.
 
@@ -98,7 +100,7 @@ linkedin_employer_date_conflict: Profile groups internship and 2023-08 to 2025-0
 
 ## AI-Assisted Internal Support
 
-- Built an early RAG assistant with Python, FastAPI, LangChain, GPT-4, and
+- Built an early RAG assistant with Python, FastAPI, LangChain, AI APIs, and
   Weaviate, implementing PDF chunking, embeddings, semantic retrieval, and
   ticket-aware context management.
 - Integrated the assistant with the internal ticketing workflow to post the top

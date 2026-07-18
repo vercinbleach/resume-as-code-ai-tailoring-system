@@ -29,6 +29,8 @@ Resume Composer without copying the upstream orchestration model.
   exists, without treating verbs as interchangeable.
 - Lead with the agentic system, multi-agent workflow, or harness and keep vendor
   tools as implementation details when that better represents the work.
+- Prefer `AI APIs` or `AI SDKs` over specific foundation-model names and
+  versions in resume-facing wording.
 - Preserve supported differentiating technical nouns such as `Custom Agent
   Harnesses` when relevant.
 - Describe executive or Board interaction only through the exact relationship,

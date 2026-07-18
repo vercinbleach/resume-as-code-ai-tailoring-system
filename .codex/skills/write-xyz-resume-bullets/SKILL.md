@@ -53,6 +53,8 @@ verbs, diagnostic questions, or bullet structures.
 - Do not make a vendor or coding tool the subject when the accomplishment is the
   system or workflow. Name the system first and describe the tool as the method,
   such as `agentic system with Codex`.
+- Do not name a specific foundation-model version in resume-facing wording.
+  Use `AI APIs` or `AI SDKs` unless the user explicitly requires the model name.
 - Do not imply Board, executive, or director-level influence from proximity.
   Distinguish formal reporting, direct collaboration, presentation audience,
   and the decision or outcome produced.

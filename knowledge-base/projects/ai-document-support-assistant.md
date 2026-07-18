@@ -27,16 +27,18 @@ knowledge, and difficult to connect consistently with ticket categories and
 resolution steps.
 
 The three-month project began shortly after Retrieval-Augmented Generation had
-emerged as a practical architecture and GPT-4 had become available. At the time,
-the approach was comparatively new and model inference was expensive enough for
-retrieval quality, chunking, and context size to affect product viability.
+emerged as a practical architecture and capable AI APIs had become available.
+At the time, the approach was comparatively new and model inference was
+expensive enough for retrieval quality, chunking, and context size to affect
+product viability.
 
 ## What the application does
 
 The application ingests and chunks internal PDF documentation, generates vector
-representations, and stores searchable knowledge in Weaviate. LangChain and
-GPT-4 combine the support ticket, its category, retrieved document chunks, and
-available application functions to decide which resources to recommend.
+representations, and stores searchable knowledge in Weaviate. LangChain
+orchestrated the AI API with the support ticket, its category, retrieved
+document chunks, and available application functions to decide which resources
+to recommend.
 
 The ticketing integration automatically publishes the top three recommended
 documents in a comment on the ticket, including direct links for internal
@@ -56,14 +58,14 @@ reusable product concept that could be offered to other organizations.
 - PDF parsing, chunking, embeddings, vectorization, and metadata enrichment.
 - Weaviate vector storage for semantic retrieval and structured knowledge
   organization.
-- LangChain orchestration around GPT-4, retrieval functions, recommendation
+- LangChain orchestration around an AI API, retrieval functions, recommendation
   logic, and context assembly.
 - Ticket-driven automation that posts the top three relevant documents directly
   as a ticket comment.
 - A custom frontend and API flow for chatting with the recommended document in
   the context of the active support ticket.
 - Retrieval and context optimizations intended to improve relevance while
-  controlling the token and inference cost of early GPT-4 usage.
+  controlling the token and inference cost of early AI API usage.
 
 ## My contribution
 
@@ -72,7 +74,7 @@ reusable product concept that could be offered to other organizations.
   categorization.
 - Built and optimized Python and FastAPI endpoints for document processing,
   ticket integration, recommendation, and conversational access.
-- Integrated LangChain and GPT-4 with retrieval and application functions so
+- Integrated LangChain with an AI API, retrieval, and application functions so
   the model could select relevant supporting resources from ticket context.
 - Connected retrieval results to the internal open-source ticketing platform,
   automatically surfacing the top three documents, resolution guidance, and
@@ -80,7 +82,7 @@ reusable product concept that could be offered to other organizations.
 - Collaborated on the custom chatbot frontend by implementing the API used to
   converse with the document and active ticket context.
 - Iterated on chunking, retrieval, and context construction to balance answer
-  quality against the comparatively high cost of GPT-4 at the time.
+  quality against the comparatively high AI API cost at the time.
 
 ## Outcome
 
@@ -102,7 +104,7 @@ time-to-resolution, retrieval-quality, adoption, or usage metric.
 - FastAPI
 - Pandas
 - LangChain
-- GPT-4
+- AI APIs
 - Weaviate
 - PDF processing
 - Document chunking
@@ -126,7 +128,7 @@ by the current evidence:
   recommendation, ticket-context, and document-access functions. The exact
   provider-native function-calling API remains to be confirmed.
 - Context management: the system assembled ticket data, categories, retrieved
-  chunks, document metadata, and conversational context within GPT-4 limits.
+  chunks, document metadata, and conversational context within API limits.
 - Triggers / automation workflows: ticket activity drove automatic top-three
   document recommendations posted as comments in the existing workflow.
 - Memory / retrieval / RAG: the core architecture used chunking, embeddings,
@@ -145,7 +147,7 @@ has been described.
   the ticket and remained responsible for choosing and applying the guidance.
 - Quality checks are plausible through iterative relevance review during the
   project, but the exact acceptance process is not documented yet.
-- GPT-4 cost influenced chunking and context optimization, but formal cost or
+- AI API cost influenced chunking and context optimization, but formal cost or
   latency tracking has not been confirmed.
 - No current evidence supports formal test sets, graders or evaluators,
   LLM-as-judge, tracing or logging as an AI evaluation method, or regression
@@ -154,8 +156,9 @@ has been described.
 ## Reusable resume bullets
 
 - Implemented an early RAG support assistant that surfaced the top three relevant
-  documents directly in support tickets by implementing PDF chunking, GPT-4 and
-  LangChain orchestration, Weaviate retrieval, and FastAPI integrations.
+  documents directly in support tickets by implementing PDF chunking, AI API
+  integration, LangChain orchestration, Weaviate retrieval, and FastAPI
+  integrations.
 - Delivered a three-month document-grounded support prototype spanning vector
   ingestion, semantic retrieval, ticket comments, and conversational APIs,
   turning internal PDF knowledge into a reusable AI product concept.
@@ -164,7 +167,7 @@ has been described.
 
 - Identify the open-source ticketing platform by name if it can be disclosed.
 - Confirm the embedding model, PDF parser, chunking strategy, retrieval `top_k`,
-  metadata filters, reranking behavior, and exact GPT-4 integration.
+  metadata filters, reranking behavior, and exact AI API integration.
 - Confirm the document and ticket volume, number of users, response time,
   retrieval relevance, adoption, and measurable effect on ticket resolution.
 - Recover any test set, manual relevance rubric, logging, tracing, cost data, or

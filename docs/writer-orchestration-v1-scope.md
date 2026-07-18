@@ -75,6 +75,8 @@ tradeoffs across sections. It must:
   verbs describe the action, without varying verbs merely for style;
 - lead with the agentic system, multi-agent workflow, or harness when it is the
   accomplishment and treat tools such as Codex as implementation details;
+- describe model integrations as `AI APIs` or `AI SDKs` instead of naming a
+  specific foundation model or version in resume-facing wording;
 - preserve supported differentiating terms such as `Custom Agent Harnesses`
   when relevant to the target role;
 - represent executive or Board interaction only with an exact relationship and
