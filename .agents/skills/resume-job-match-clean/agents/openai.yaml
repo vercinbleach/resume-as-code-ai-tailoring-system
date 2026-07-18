@@ -1,0 +1,4 @@
+interface:
+  display_name: "Clean Job Match Resume QA"
+  short_description: "Build a clean job-match decision matrix"
+  default_prompt: "Use $resume-job-match-clean to compare only the supplied resume PDF and normalized job description, including hard gates and evidence tables."

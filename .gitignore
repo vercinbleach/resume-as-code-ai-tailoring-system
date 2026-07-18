@@ -1,0 +1,31 @@
+# Generated resume artifacts
+output/*
+!output/.gitkeep
+
+# Historical resumes and generated document binaries
+archive/previous-cvs/*.pdf
+*.png
+
+# Job-specific browser captures and normalized snapshots
+qa/jobs/*
+!qa/jobs/.gitkeep
+
+# Local render caches
+.rendercv/
+.venv/
+rendercv_output/
+tmp/
+__pycache__/
+*.pyc
+
+# Ephemeral task sandboxes
+.sandbox/
+
+# Resume QA runtime and generated sessions
+qa/.venv/
+qa/sessions/*
+!qa/sessions/.gitkeep
+
+# Generated tailoring context sessions
+tailoring/sessions/*
+!tailoring/sessions/.gitkeep

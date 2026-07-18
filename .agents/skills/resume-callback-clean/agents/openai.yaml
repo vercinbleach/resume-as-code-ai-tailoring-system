@@ -1,0 +1,4 @@
+interface:
+  display_name: "Clean Hiring Manager Callback"
+  short_description: "Estimate hiring-manager callback likelihood"
+  default_prompt: "Use $resume-callback-clean to judge whether only the supplied resume PDF and normalized job description would earn a hiring-manager callback."

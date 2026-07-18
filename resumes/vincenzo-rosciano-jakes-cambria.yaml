@@ -1,0 +1,165 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.8/schema.json
+cv:
+  name: Vincenzo Rosciano
+  location: Barcelona, ES
+  email: vercinxd@gmail.com
+  phone: "+34657632514"
+  custom_connections:
+    - fontawesome_icon: linkedin
+      placeholder: LinkedIn
+      url: https://www.linkedin.com/in/vincenzo-carlo-rosciano/
+    - fontawesome_icon: github
+      placeholder: GitHub
+      url: https://github.com/vercinbleach
+  sections:
+    EDUCATION:
+      - name: Canterbury Christ Church University
+        summary: "*BSc in Computer Science*"
+        date: "Expected graduation: 2027"
+      - name: iFP Grupo Planeta
+        summary: "*CFGS Higher National Diploma, Web Application Developer*"
+        date: "Graduated: 2023"
+        location: Barcelona, ES
+      - name: La Salle La Colina
+        summary: "*GED*"
+        date: "Graduated: 2019"
+        location: Caracas, VE
+    EXPERIENCE:
+      - company: Grup Montaner
+        position: Lead Software Engineer
+        start_date: 2025-07
+        end_date: present
+        location: Barcelona, ES
+        summary: "*Promoted from Software Engineer in January 2026*"
+        highlights:
+          - Lead and coach two developers on programming, task decomposition, and consistent engineering practices within a three-person team.
+          - Partnered weekly or biweekly with the CEO, CFO, Controller, and COO to prioritize and architect a full-stack BPM platform that centralized cross-department workflows for a EUR 90M-revenue organization.
+          - Built Java/Python microservices and an RPA layer for CRM synchronization, compliance workflows, and an API-less legacy ERP, while delivering executive Power BI dashboards.
+      - company: Neverhack (formerly Innovery)
+        position: Software Engineer
+        start_date: 2023-05
+        end_date: 2025-07
+        location: Barcelona, ES
+        highlights:
+          - Re-engineered 90% of the logic across approximately 25 processes in a legacy no-code platform, reducing incoming bug reports from 10-25 per month to zero and shifting demand to enhancements and new processes.
+          - Connected 10+ platforms, including CRM, ERP, LinkedIn, and Microsoft 365, automating CRM-ERP synchronization and reducing data silos.
+          - Delivered 10+ Splunk SOAR playbooks with Python and Bash for automated IP blocking and remediation, saving 20+ hours weekly and EUR 34K annually.
+    "PROJECTS & OPEN SOURCE":
+      - name: "Editify - Voice x Fintech Hackathon | [GitHub](https://github.com/vercinbleach/hackaton-cala-voice-of-finance)"
+        highlights:
+          - Developed a multi-agent financial video editor in one night as the sole developer on a three-person team with two non-technical collaborators, orchestrating Cala, Codex, ElevenLabs, HyperFrames, and FFmpeg.
+      - name: AI-Powered Mortgage Agent
+        highlights:
+          - Contributed to a monitored weekly LLM workflow covering public mortgage and loan products from every bank in Spain, combining Python, tool calling, deterministic validation, LLM-as-judge experiments, and human review.
+      - name: "SuiteCRM Open Source | [Open PR](https://github.com/SuiteCRM/SuiteCRM/pull/10766)"
+        highlights:
+          - Extended SuiteCRM's V8 JSON API with base64 DocumentRevision uploads, extension validation, and MIME metadata; the patch runs in production internally and across downstream forks, with thanks from 10+ users.
+    TECHNICAL SKILLS:
+      - label: Backend
+        details: Microservices, Python, FastAPI, Java, Spring Boot, PHP, MySQL, PostgreSQL
+      - label: Frontend
+        details: React, Next.js, TypeScript, Tailwind CSS, shadcn/ui
+      - label: Tools
+        details: Docker, AWS, Git, Linux, CI/CD, Splunk SOAR, Bash, Power BI
+      - label: Data & Automation
+        details: Selenium, Pandas, LangChain, RPA, REST/SOAP APIs
+      - label: Languages
+        details: Spanish (native), English (fluent), Italian (fluent)
+design:
+  theme: sb2nov
+  page:
+    size: a4
+    top_margin: 1.65cm
+    bottom_margin: 1.27cm
+    left_margin: 1.27cm
+    right_margin: 1.27cm
+    show_footer: false
+    show_top_note: false
+  typography:
+    font_family:
+      body: Cambria
+      name: Cambria
+      headline: Cambria
+      connections: Cambria
+      section_titles: Cambria
+    line_spacing: 0.32em
+    alignment: left
+    date_and_location_column_alignment: right
+    font_size:
+      body: 11pt
+      name: 25pt
+      connections: 9pt
+      section_titles: 14pt
+    small_caps:
+      name: true
+      section_titles: false
+  colors:
+    name: rgb(0,0,0)
+    connections: rgb(0,0,0)
+    section_titles: rgb(0,0,0)
+    links: rgb(0,0,0)
+  links:
+    underline: true
+    show_external_link_icon: false
+  header:
+    alignment: center
+    space_below_name: 0.04cm
+    space_below_headline: 0cm
+    space_below_connections: 0.32cm
+    connections:
+      phone_number_format: international
+      show_icons: false
+      display_urls_instead_of_usernames: false
+      separator: "|"
+      space_between_connections: 0.16cm
+  section_titles:
+    type: with_full_line
+    line_thickness: 0.5pt
+    space_above: 0.46cm
+    space_below: 0.1cm
+  sections:
+    allow_page_break: false
+    space_between_regular_entries: 0.68em
+    space_between_text_based_entries: 0.12em
+  entries:
+    date_and_location_width: 4.7cm
+    side_space: 0cm
+    space_between_columns: 0.08cm
+    allow_page_break: false
+    short_second_row: false
+    degree_width: 0.8cm
+    highlights:
+      bullet: "•"
+      nested_bullet: "•"
+      space_left: 0.12cm
+      space_above: 0cm
+      space_between_items: 0cm
+      space_between_bullet_and_text: 0.42em
+  templates:
+    date_range: START_DATE - END_DATE
+    experience_entry:
+      main_column: |-
+        **POSITION**
+        *COMPANY*
+        HIGHLIGHTS
+      date_and_location_column: |-
+        **DATE**
+        *LOCATION*
+locale:
+  language: english
+  present: Present
+settings:
+  current_date: today
+  render_command:
+    output_folder: ../output/pdf
+    typst_path: OUTPUT_FOLDER/vincenzo-rosciano-jakes-cambria.typ
+    pdf_path: OUTPUT_FOLDER/vincenzo-rosciano-jakes-cambria.pdf
+    markdown_path: OUTPUT_FOLDER/vincenzo-rosciano-jakes-cambria.md
+    html_path: OUTPUT_FOLDER/vincenzo-rosciano-jakes-cambria.html
+    png_path: OUTPUT_FOLDER/vincenzo-rosciano-jakes-cambria.png
+    dont_generate_markdown: false
+    dont_generate_html: false
+    dont_generate_typst: false
+    dont_generate_pdf: false
+    dont_generate_png: false
+  pdf_title: Vincenzo Rosciano - Jake Cambria Resume

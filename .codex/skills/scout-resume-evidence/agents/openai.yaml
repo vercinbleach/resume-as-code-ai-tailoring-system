@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Evidence Scout"
+  short_description: "Rank resume evidence without gating the Composer"
+  default_prompt: "Use $scout-resume-evidence to rank and excerpt relevant resume evidence for one advisory assignment."

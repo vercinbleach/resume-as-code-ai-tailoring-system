@@ -1,0 +1,4 @@
+interface:
+  display_name: "Clean Leadership Resume QA"
+  short_description: "Score PDF leadership with a Monzo baseline"
+  default_prompt: "Use $resume-leadership-clean to evaluate only the supplied resume PDF."

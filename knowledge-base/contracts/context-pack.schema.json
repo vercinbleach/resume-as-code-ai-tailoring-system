@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.resume/knowledge-base/context-pack.schema.json",
+  "title": "Audited resume writer context pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "job", "inputs", "policy", "summary", "criteria", "evidence_cards", "claims", "coverage_queue", "exclusions"],
+  "properties": {
+    "schema_version": {"const": 2},
+    "job": {"type": "object"},
+    "inputs": {"type": "object"},
+    "policy": {"type": "object"},
+    "summary": {"type": "object"},
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["criterion_id", "text", "kind", "decision", "include_evidence_ids", "maybe_evidence_ids", "reasons", "caveats", "follow_up_questions"],
+        "properties": {
+          "criterion_id": {"type": "string"},
+          "text": {"type": "string"},
+          "kind": {"enum": ["eligibility", "must-have", "preferred", "responsibility", "unclear"]},
+          "decision": {"enum": ["include", "maybe", "exclude"]},
+          "include_evidence_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^evidence-"}},
+          "maybe_evidence_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^evidence-"}},
+          "reasons": {"type": "array", "items": {"type": "string"}},
+          "caveats": {"type": "array", "items": {"type": "string"}},
+          "follow_up_questions": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "evidence_cards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "criterion_id", "source_file", "line_start", "line_end", "excerpt", "excerpt_sha256", "claim_ids", "technologies", "source_metadata", "reason", "caveats", "use_status"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^evidence-"},
+          "criterion_id": {"type": "string"},
+          "source_file": {"type": "string", "pattern": "^knowledge-base/.+\\.md$"},
+          "line_start": {"type": "integer", "minimum": 1},
+          "line_end": {"type": "integer", "minimum": 1},
+          "excerpt": {"type": "string", "minLength": 1},
+          "excerpt_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "claim_ids": {"type": "array", "uniqueItems": true, "items": {"type": "string", "pattern": "^claim-"}},
+          "technologies": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+          "source_metadata": {"type": "object"},
+          "reason": {"type": "string"},
+          "caveats": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+          "use_status": {"enum": ["include", "maybe"]}
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "statement", "source_file", "project_id", "resume_safe", "use_status"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^claim-"},
+          "statement": {"type": "string"},
+          "source_file": {"type": "string"},
+          "project_id": {"type": "string"},
+          "resume_safe": {"const": true},
+          "use_status": {"enum": ["include", "maybe"]}
+        }
+      }
+    },
+    "coverage_queue": {"type": "array"},
+    "exclusions": {"type": "array"}
+  }
+}

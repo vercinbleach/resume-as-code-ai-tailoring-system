@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.resume/knowledge-base/candidate-pool.schema.json",
+  "title": "Deterministic claim retrieval candidate pool",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "job", "inputs", "retrieval", "coverage", "criteria"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "job": {"type": "object"},
+    "inputs": {"type": "object"},
+    "retrieval": {"type": "object"},
+    "coverage": {"type": "object"},
+    "criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "text", "kind", "search_terms", "source", "candidates", "narrative_candidates"],
+        "properties": {
+          "id": {"type": "string"},
+          "text": {"type": "string"},
+          "kind": {"enum": ["eligibility", "must-have", "preferred", "responsibility", "unclear"]},
+          "search_terms": {"type": "array", "items": {"type": "string"}},
+          "source": {"type": ["object", "null"]},
+          "candidates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["claim_id", "score", "signals", "status", "resume_safe", "source_file"],
+              "properties": {
+                "claim_id": {"type": "string", "pattern": "^claim-"},
+                "score": {"type": "number", "minimum": 0},
+                "signals": {"type": "array", "items": {"type": "string"}},
+                "status": {"enum": ["confirmed", "partial", "unverified", "conflicting"]},
+                "resume_safe": {"type": "boolean"},
+                "source_file": {"type": "string"}
+              }
+            }
+          },
+          "narrative_candidates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["source_file", "score", "signals"],
+              "properties": {
+                "source_file": {"type": "string"},
+                "score": {"type": "number", "minimum": 0},
+                "signals": {"type": "array", "items": {"type": "string"}}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

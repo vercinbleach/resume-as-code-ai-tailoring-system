@@ -1,0 +1,208 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Observed job and application intake",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "capture", "job", "application", "provenance"],
+  "properties": {
+    "schema_version": {"enum": ["1.0", "1.1"]},
+    "capture": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_url", "canonical_url", "captured_at", "status", "pages_visited", "blockers", "submission_attempted"],
+      "properties": {
+        "source_url": {"type": "string", "format": "uri"},
+        "canonical_url": {"type": "string", "format": "uri"},
+        "captured_at": {"type": "string", "format": "date-time"},
+        "status": {"enum": ["complete", "partial", "blocked"]},
+        "pages_visited": {"type": "array", "items": {"$ref": "#/$defs/page"}},
+        "blockers": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "submission_attempted": {"const": false}
+      }
+    },
+    "job": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["company", "title", "job_id", "locations", "workplace_type", "employment_type", "compensation", "description", "responsibilities", "requirements", "technologies", "languages", "education", "experience"],
+      "properties": {
+        "company": {"type": ["string", "null"], "minLength": 1},
+        "title": {"type": ["string", "null"], "minLength": 1},
+        "job_id": {"type": ["string", "null"]},
+        "locations": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "workplace_type": {"enum": ["remote", "hybrid", "on-site", "unknown"]},
+        "employment_type": {"type": ["string", "null"]},
+        "compensation": {"type": "array", "items": {"$ref": "#/$defs/evidence_item"}},
+        "description": {"type": "array", "items": {"$ref": "#/$defs/evidence_item"}},
+        "responsibilities": {"type": "array", "items": {"$ref": "#/$defs/evidence_item"}},
+        "requirements": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["must_have", "preferred", "unclear"],
+          "properties": {
+            "must_have": {"type": "array", "items": {"$ref": "#/$defs/classified_item"}},
+            "preferred": {"type": "array", "items": {"$ref": "#/$defs/classified_item"}},
+            "unclear": {"type": "array", "items": {"$ref": "#/$defs/classified_item"}}
+          }
+        },
+        "technologies": {"type": "array", "items": {"$ref": "#/$defs/evidence_item"}},
+        "languages": {"type": "array", "items": {"$ref": "#/$defs/evidence_item"}},
+        "education": {"type": "array", "items": {"$ref": "#/$defs/evidence_item"}},
+        "experience": {"type": "array", "items": {"$ref": "#/$defs/evidence_item"}},
+        "criteria": {"type": "array", "items": {"$ref": "#/$defs/criterion"}}
+      }
+    },
+    "application": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["apply_url", "host", "status", "steps_visible", "fields", "documents", "notices", "blockers", "submission_attempted"],
+      "properties": {
+        "apply_url": {"type": ["string", "null"], "format": "uri"},
+        "host": {"type": ["string", "null"]},
+        "status": {"enum": ["inspected", "not-found", "blocked", "auth-required"]},
+        "steps_visible": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "fields": {"type": "array", "items": {"$ref": "#/$defs/field"}},
+        "documents": {"type": "array", "items": {"$ref": "#/$defs/document"}},
+        "notices": {"type": "array", "items": {"$ref": "#/$defs/notice"}},
+        "blockers": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "autofill_from_resume_observed": {"enum": ["yes", "no", "unknown"]},
+        "submission_attempted": {"const": false}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observed_only", "hidden_rules_claimed", "notes"],
+      "properties": {
+        "observed_only": {"const": true},
+        "hidden_rules_claimed": {"const": false},
+        "notes": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"schema_version": {"const": "1.1"}}},
+      "then": {
+        "properties": {
+          "job": {"required": ["criteria"]},
+          "application": {"required": ["autofill_from_resume_observed"]}
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "location"],
+      "properties": {
+        "url": {"type": "string", "format": "uri"},
+        "location": {"type": "string", "minLength": 1}
+      }
+    },
+    "page": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "purpose", "status"],
+      "properties": {
+        "url": {"type": "string", "format": "uri"},
+        "purpose": {"enum": ["job", "application", "other"]},
+        "status": {"enum": ["inspected", "partial", "blocked"]}
+      }
+    },
+    "evidence_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "source"],
+      "properties": {
+        "text": {"type": "string", "minLength": 1},
+        "source": {"$ref": "#/$defs/source"}
+      }
+    },
+    "classified_item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "source", "classification_basis"],
+      "properties": {
+        "text": {"type": "string", "minLength": 1},
+        "source": {"$ref": "#/$defs/source"},
+        "classification_basis": {"enum": ["explicit", "heading", "wording", "form-required", "inferred"]}
+      }
+    },
+    "criterion_quality": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["standalone", "singular", "clear", "specific", "objectively_verifiable", "bias_risk", "notes"],
+      "properties": {
+        "standalone": {"type": "boolean"},
+        "singular": {"type": "boolean"},
+        "clear": {"type": "boolean"},
+        "specific": {"type": "boolean"},
+        "objectively_verifiable": {"type": "boolean"},
+        "bias_risk": {"enum": ["none", "possible", "high"]},
+        "notes": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      }
+    },
+    "criterion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "text", "kind", "source", "quality", "search_terms"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$"},
+        "text": {"type": "string", "minLength": 1},
+        "kind": {"enum": ["eligibility", "must-have", "preferred", "responsibility", "unclear"]},
+        "source": {"$ref": "#/$defs/source"},
+        "quality": {"$ref": "#/$defs/criterion_quality"},
+        "search_terms": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+      }
+    },
+    "field": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "section", "type", "required", "options", "source"],
+      "properties": {
+        "label": {"type": "string", "minLength": 1},
+        "section": {"type": "string", "minLength": 1},
+        "type": {"type": "string", "minLength": 1},
+        "required": {"enum": ["yes", "no", "unknown"]},
+        "options": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "source": {"$ref": "#/$defs/source"},
+        "required_question": {"enum": ["yes", "no", "unknown"]},
+        "screening_classification": {"enum": ["eligibility", "administrative", "demographic", "consent", "open-ended", "unknown"]},
+        "explicit_eligibility_gate": {"enum": ["yes", "no", "unknown"]},
+        "gate_basis": {"enum": ["explicit-eligibility", "question-only", "not-a-gate", "unknown"]},
+        "potential_auto_reject": {"const": "unknown"},
+        "validation_rules": {"type": "array", "items": {"type": "string", "minLength": 1}}
+      },
+      "allOf": [
+        {
+          "if": {"required": ["required_question"]},
+          "then": {"required": ["screening_classification", "explicit_eligibility_gate", "gate_basis", "potential_auto_reject", "validation_rules"]}
+        }
+      ]
+    },
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "required", "formats", "source"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "required": {"enum": ["yes", "no", "unknown"]},
+        "formats": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "source": {"$ref": "#/$defs/source"}
+      }
+    },
+    "notice": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "text", "source"],
+      "properties": {
+        "type": {"enum": ["privacy", "ai-review", "application-limit", "deadline", "equal-opportunity", "other"]},
+        "text": {"type": "string", "minLength": 1},
+        "source": {"$ref": "#/$defs/source"},
+        "action_url": {"type": ["string", "null"], "format": "uri"},
+        "opt_out_available": {"type": ["boolean", "null"]}
+      }
+    }
+  }
+}

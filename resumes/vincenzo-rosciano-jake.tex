@@ -1,0 +1,162 @@
+%-------------------------
+% Resume in LaTeX
+% Based on Jake Gutierrez's MIT-licensed resume template:
+% https://github.com/jakegut/resume
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+  \textbf{\Huge \scshape Vincenzo Rosciano} \\ \vspace{1pt}
+  \small Barcelona, ES $|$ +34 657 63 25 14 $|$
+  \href{mailto:vercinxd@gmail.com}{\underline{vercinxd@gmail.com}} $|$
+  \href{https://www.linkedin.com/in/vincenzo-carlo-rosciano/}{\underline{LinkedIn}} $|$
+  \href{https://github.com/vercinbleach}{\underline{GitHub}}
+\end{center}
+
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Canterbury Christ Church University}{Expected graduation: 2027}
+      {BSc in Computer Science}{}
+    \resumeSubheading
+      {iFP Grupo Planeta}{Barcelona, ES}
+      {CFGS Higher National Diploma, Web Application Developer}{Graduated: 2023}
+    \resumeSubheading
+      {La Salle La Colina}{Caracas, VE}
+      {GED}{Graduated: 2019}
+  \resumeSubHeadingListEnd
+
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Lead Developer}{Jan. 2026 - Present}
+      {Grup Montaner}{Barcelona, ES}
+      \resumeItemListStart
+        \resumeItem{Lead a three-person development team, managing two developers and using GitHub Projects to prioritize, assign, and track delivery across the Operations App and internal Camunda platform.}
+        \resumeItem{Coordinate a GitFlow-based delivery model with main, develop, work branches, and pull requests, aligning parallel development with controlled integration.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Software Engineer}{July 2025 - Dec. 2025}
+      {Grup Montaner}{Barcelona, ES}
+      \resumeItemListStart
+        \resumeItem{Architected a full-stack BPM platform for a EUR 90M-revenue organization using an open-source Java engine and Next.js/React to centralize cross-department workflows.}
+        \resumeItem{Built Java/Python microservices and an RPA layer for CRM synchronization, compliance workflows, and an API-less legacy ERP, while delivering executive Power BI dashboards.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Software Engineer}{Sept. 2024 - July 2025}
+      {Neverhack}{Barcelona, ES}
+      \resumeItemListStart
+        \resumeItem{Delivered 10+ Splunk SOAR playbooks with Python and Bash for automated IP blocking and remediation, saving 20+ hours weekly and EUR 34K annually.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Junior Software Engineer}{May 2023 - Sept. 2024}
+      {Innovery}{Barcelona, ES}
+      \resumeItemListStart
+        \resumeItem{Rewrote 90\% of the logic across 10+ critical workflows in a legacy no-code platform, reducing incidents from 10 per week to 3 per month and clearing the backlog.}
+        \resumeItem{Built an integration ecosystem across 10+ platforms, including CRM, ERP, LinkedIn, and Microsoft 365, automating CRM-ERP synchronization and reducing data silos.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{PROJECTS}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Editify - Voice x Fintech Hackathon} $|$ \href{https://github.com/vercinbleach/hackaton-cala-voice-of-finance}{\underline{GitHub}}}{}
+      \resumeItemListStart
+        \resumeItem{Built a multi-agent financial video editor in one night as the sole developer on a three-person team with two non-technical collaborators, orchestrating Cala, Codex, ElevenLabs, HyperFrames, and FFmpeg.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{AI-Powered Mortgage Agent}}{}
+      \resumeItemListStart
+        \resumeItem{Collaborated in a three-person team on an AI agent for the Spanish mortgage market, using Selenium, OCR, LangChain, and LLMs to structure data from major banks with 100\% accuracy in weekly market updates.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{SuiteCRM Open Source} $|$ \href{https://github.com/SuiteCRM/SuiteCRM/pull/10766}{\underline{Open PR}}}{}
+      \resumeItemListStart
+        \resumeItem{Extended the V8 JSON API with base64 DocumentRevision uploads, extension validation, and MIME metadata; some users sent thanks years later.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+\section{TECHNICAL SKILLS}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+      \textbf{Backend}{: Microservices, Python, FastAPI, Java, Spring Boot, PHP, MySQL, PostgreSQL} \\
+      \textbf{Frontend}{: React, Next.js, TypeScript, Tailwind CSS, shadcn/ui} \\
+      \textbf{Tools}{: Docker, AWS, Git, Linux, CI/CD, Splunk SOAR, Bash, Power BI} \\
+      \textbf{AI}{: LLMs, Agent Orchestration, Tool Calling, Agent Harnesses, LLM-as-Judge} \\
+      \textbf{Languages}{: Spanish (native), English (fluent), Italian (fluent)}
+    }}
+  \end{itemize}
+
+\end{document}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Technical Resume Bullet Writer"
+  short_description: "Revise evidence-backed resume bullets on demand"
+  default_prompt: "Use $write-xyz-resume-bullets to revise these supplied resume bullets without inventing evidence."

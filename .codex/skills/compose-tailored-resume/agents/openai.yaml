@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tailored Resume Composer"
+  short_description: "Compose and visually verify one tailored resume"
+  default_prompt: "Use $compose-tailored-resume to build and visually verify a job-tailored resume from the supplied sandbox inputs."

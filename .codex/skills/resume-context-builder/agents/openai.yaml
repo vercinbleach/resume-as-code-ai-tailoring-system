@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Context Builder"
+  short_description: "Prepare scouts and one full resume Composer"
+  default_prompt: "Use $resume-context-builder to prepare advisory scouts and one isolated Resume Composer for this normalized job."

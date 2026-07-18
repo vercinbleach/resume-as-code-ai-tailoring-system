@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Evidence Reviewer"
+  short_description: "Review job criteria against verified claims"
+  default_prompt: "Use $review-resume-evidence to evaluate bounded resume claims for atomic job criteria."

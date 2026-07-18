@@ -1,0 +1,4 @@
+interface:
+  display_name: "Clean Technical Resume QA"
+  short_description: "Score technical evidence from the final PDF"
+  default_prompt: "Use $resume-technical-clean to evaluate only the supplied resume PDF."

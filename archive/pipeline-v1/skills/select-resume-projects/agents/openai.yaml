@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Project Selector"
+  short_description: "Select and write evidence-backed resume projects"
+  default_prompt: "Use $select-resume-projects to select and write the projects most relevant to this job."

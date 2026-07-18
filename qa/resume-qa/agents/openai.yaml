@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume QA"
+  short_description: "Inspect job URLs and run clean resume QA"
+  default_prompt: "Use $resume-qa to inspect this job URL and compare the visible requirements with my final resume PDF without submitting an application."

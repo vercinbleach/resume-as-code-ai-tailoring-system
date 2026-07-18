@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Claim Use Critic"
+  short_description: "Audit each proposed claim use for resume safety"
+  default_prompt: "Use $audit-resume-claim-use to audit proposed criterion and claim pairs for safe resume use."

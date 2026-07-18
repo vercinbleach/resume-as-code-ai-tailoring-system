@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Skills Selector"
+  short_description: "Select truthful skills relevant to a target role"
+  default_prompt: "Use $select-resume-skills to select the most relevant evidence-backed technical skills."

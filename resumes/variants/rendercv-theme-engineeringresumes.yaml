@@ -1,0 +1,5 @@
+design:
+  theme: engineeringresumes
+  header:
+    connections:
+      phone_number_format: international
