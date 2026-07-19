@@ -37,6 +37,8 @@ Resume Composer without copying the upstream orchestration model.
   Harnesses` when relevant.
 - Describe executive or Board interaction only through the exact relationship,
   action, and supported decision or outcome.
+- Prefer the verified formal collective name over a list of overlapping
+  executive titles when the group itself is the relevant collaborator.
 - Keep one achievement per bullet; do not combine coaching with executive
   prioritization when each belongs to a different outcome.
 - Preserve concrete people-management actions such as organizing, assigning,

@@ -108,6 +108,8 @@ including `Custom Agent Harnesses`; do not replace them with generic labels.
 - State executive or Board interaction only when the sources distinguish formal
   reporting, direct collaboration, or presentation audience and connect it to a
   supported decision, alignment, delivery, or organizational outcome.
+- When a verified collective body is the relevant collaborator, prefer its
+  formal name over listing overlapping executive titles.
 - Do not repeat the same accomplishment or evidence across Experience and
   Projects. Allocate it to the section where it adds the most value.
 - Use a public repository, project, event, or contribution link when the

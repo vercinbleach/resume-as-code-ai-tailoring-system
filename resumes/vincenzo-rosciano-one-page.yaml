@@ -40,7 +40,7 @@ cv:
         location: Barcelona, ES
         highlights:
           - Architected a full-stack BPM platform for a EUR 90M-revenue organization using an open-source Java engine and Next.js/React to centralize cross-department workflows.
-          - Partnered weekly or biweekly with the CEO, CFO, Controller, and COO to prioritize cross-department process digitalization, centralizing data, approvals, and documents through integrations with CRM, HR, certified communications, and an API-less legacy ERP.
+          - Partnered weekly or biweekly with the Board of Directors to prioritize cross-department process digitalization, centralizing data, approvals, and documents through integrations with CRM, HR, certified communications, and an API-less legacy ERP.
       - company: Neverhack (formerly Innovery)
         position: Software Engineer
         start_date: 2023-05

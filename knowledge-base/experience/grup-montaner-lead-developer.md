@@ -49,12 +49,13 @@ This is a profile-maintenance gap, not evidence against the internal promotion.
 
 ## Executive collaboration and prioritization
 
-- Work directly with the CEO, CFO, Controller, and COO in weekly or biweekly
-  sessions.
+- Work directly with the Board of Directors in weekly or biweekly sessions.
+- The Board participants include the CEO, the CFO who also serves as
+  Controller, and the COO.
 - Translate process needs and executive priorities from those sessions into
   scoped and prioritized delivery work for the development team.
-- This is recurring direct collaboration, not a claim of formally reporting to
-  the full Board of Directors.
+- This is recurring direct collaboration with the Board, not a claim of a
+  formal reporting line.
 - Resume presentation should keep this process-prioritization evidence with the
   internal process-digitalization work, not combine it with the coaching bullet.
 

@@ -83,6 +83,8 @@ tradeoffs across sections. It must:
   when relevant to the target role;
 - represent executive or Board interaction only with an exact relationship and
   a supported decision, alignment, delivery, or organizational outcome;
+- prefer a verified formal collective name over a noisy list of overlapping
+  executive titles when the collective body is the relevant collaborator;
 - keep coaching or people development separate from executive prioritization
   when they are distinct achievements, placing executive collaboration with
   the process, program, or delivery decision it shaped;

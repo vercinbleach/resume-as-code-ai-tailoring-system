@@ -123,7 +123,9 @@ A precise qualitative result is stronger than an unsupported metric.
   including `harness`, protocol, evaluation, orchestration, and safety terms.
 - For executive or Board interaction, name the exact relationship and connect
   it to prioritization, alignment, a decision, delivery, or another supported
-  outcome. Use `reported to` only for a real reporting line.
+  outcome. When the collective body is verified, prefer its formal name over a
+  noisy list of overlapping titles. Use `reported to` only for a real reporting
+  line.
 - Use job-description terminology only when it is a technically defensible
   synonym for the evidence.
 

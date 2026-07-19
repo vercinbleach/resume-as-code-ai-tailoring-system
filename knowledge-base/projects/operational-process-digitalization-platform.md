@@ -392,7 +392,7 @@ most frequently revised BPMN in the repository, with 42 file-level revisions.
   90M-revenue organization, combining Java 17 and Spring Boot, a Next.js and
   React task portal, Python services, authentication, Windows RPA, and
   controlled AWS delivery.
-- Partnered weekly or biweekly with the CEO, CFO, Controller, and COO to
+- Partnered weekly or biweekly with the Board of Directors to
   prioritize cross-department process digitalization, centralizing data,
   approvals, and documents through integrations with HubSpot, HR, certified
   communications, and an API-less legacy ERP.
