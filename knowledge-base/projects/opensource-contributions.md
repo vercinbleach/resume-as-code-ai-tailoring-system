@@ -125,8 +125,8 @@ upload its file content in the same workflow:
   after other community users reported the same limitation.
 - Saw downstream users apply the patch in their own forks while the upstream
   contribution remained open and unmerged.
-- Received unsolicited thank-you messages from more than 10 SuiteCRM users over
-  the following two years.
+- Received unsolicited thank-you messages from some SuiteCRM users over the
+  following two years.
 
 ### Pull-request history
 
@@ -146,8 +146,8 @@ The contribution must not be described as merged until GitHub shows that status.
 - Provided a migration path away from the unreliable SOAP v4.1 endpoint.
 - Demonstrated an employer-originated problem translated into an upstream
   open-source contribution.
-- Prompted unsolicited thank-you messages from more than 10 SuiteCRM users over
-  the two years after the original pull request, despite remaining unmerged.
+- Prompted unsolicited thank-you messages from some SuiteCRM users over the two
+  years after the original pull request, despite remaining unmerged.
 - Runs in production in Innovery's internal SuiteCRM deployment and in
   downstream user forks despite not being merged into the core repository.
 - Production use in both contexts is user-confirmed on 2026-07-19; public links
@@ -166,7 +166,7 @@ The contribution must not be described as merged until GitHub shows that status.
 
 - Submitted a DocumentRevision upload patch to SuiteCRM's 5.6k-star upstream;
   it runs in production internally and across downstream forks, with thanks
-  from more than 10 users despite remaining unmerged.
+  from some users despite remaining unmerged.
 - Submitted an upstream SuiteCRM patch that enables DocumentRevision uploads
   through the V8 JSON API, replacing an unreliable SOAP v4.1 workflow with
   validated base64 file handling and metadata persistence.
@@ -188,7 +188,7 @@ The contribution must not be described as merged until GitHub shows that status.
 - Record any review feedback, tests, or changes requested by maintainers.
 - Add the number of integrations or document uploads affected at Innovery if
   that information can be disclosed.
-- Preserve screenshots or links for the 10+ thank-you messages where possible;
-  the count is currently user-confirmed rather than fully public evidence.
+- Preserve screenshots or links for the thank-you messages where possible;
+  this evidence is currently user-confirmed rather than fully public.
 - Preserve public links to the downstream fork deployments where possible;
   their production use is currently user-confirmed.

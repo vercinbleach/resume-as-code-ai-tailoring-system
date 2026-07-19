@@ -96,7 +96,7 @@ linkedin_employer_date_conflict: Profile groups internship and 2023-08 to 2025-0
 - Customized SuiteCRM modules and supported process-specific microservices.
 - Implemented a public SuiteCRM V8 DocumentRevision upload patch that runs in
   production internally and across downstream forks while remaining unmerged
-  upstream; more than 10 users later sent thanks.
+  upstream; some users later sent thanks.
 
 ## AI-Assisted Internal Support
 
