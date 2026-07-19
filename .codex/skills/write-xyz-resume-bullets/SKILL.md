@@ -55,6 +55,9 @@ verbs, diagnostic questions, or bullet structures.
   such as `agentic system with Codex`.
 - Do not name a specific foundation-model version in resume-facing wording.
   Use `AI APIs` or `AI SDKs` unless the user explicitly requires the model name.
+- Do not use a vendor name when the supported capability is clearer and the
+  vendor is not relevant to the target role; prefer `authentication` over a
+  provider name in that case.
 - Do not imply Board, executive, or director-level influence from proximity.
   Distinguish formal reporting, direct collaboration, presentation audience,
   and the decision or outcome produced.

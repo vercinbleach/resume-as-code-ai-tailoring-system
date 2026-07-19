@@ -390,8 +390,8 @@ most frequently revised BPMN in the repository, with 42 file-level revisions.
 
 - Architected and led a Camunda 7 process-digitalization platform for a EUR
   90M-revenue organization, combining Java 17 and Spring Boot, a Next.js and
-  React task portal, Python services, Keycloak, Windows RPA, and controlled AWS
-  delivery.
+  React task portal, Python services, authentication, Windows RPA, and
+  controlled AWS delivery.
 - Partnered weekly or biweekly with the CEO, CFO, Controller, and COO to
   prioritize cross-department process digitalization, centralizing data,
   approvals, and documents through integrations with HubSpot, HR, certified

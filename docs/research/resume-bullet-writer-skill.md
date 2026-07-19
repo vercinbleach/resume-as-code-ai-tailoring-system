@@ -31,6 +31,8 @@ Resume Composer without copying the upstream orchestration model.
   tools as implementation details when that better represents the work.
 - Prefer `AI APIs` or `AI SDKs` over specific foundation-model names and
   versions in resume-facing wording.
+- Prefer a supported capability such as `authentication` over a vendor name
+  when the vendor itself is not relevant to the target role.
 - Preserve supported differentiating technical nouns such as `Custom Agent
   Harnesses` when relevant.
 - Describe executive or Board interaction only through the exact relationship,

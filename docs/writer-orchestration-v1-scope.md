@@ -77,6 +77,8 @@ tradeoffs across sections. It must:
   accomplishment and treat tools such as Codex as implementation details;
 - describe model integrations as `AI APIs` or `AI SDKs` instead of naming a
   specific foundation model or version in resume-facing wording;
+- prefer capability wording over vendor names when the vendor does not add
+  relevant evidence for the target role;
 - preserve supported differentiating terms such as `Custom Agent Harnesses`
   when relevant to the target role;
 - represent executive or Board interaction only with an exact relationship and

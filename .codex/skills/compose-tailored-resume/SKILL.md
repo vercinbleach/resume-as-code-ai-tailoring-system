@@ -112,6 +112,8 @@ including `Custom Agent Harnesses`; do not replace them with generic labels.
   copied source provides one; never invent or expose an internal URL.
 - Use `AI APIs` or `AI SDKs` instead of specific foundation-model names or
   versions in resume-facing wording unless the user explicitly requires one.
+- Prefer capability wording over vendor names when the vendor is not relevant
+  to the target role, while preserving the exact vendor in source evidence.
 - For open-source evidence, distinguish upstream merge status, downstream fork
   adoption, and verified production use; do not weaken production deployment
   into generic adoption or imply an upstream merge that did not occur.
