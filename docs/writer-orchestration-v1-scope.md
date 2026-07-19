@@ -88,6 +88,8 @@ tradeoffs across sections. It must:
   the process, program, or delivery decision it shaped;
 - preserve accurate ownership and distinguish individual, team, technical-lead,
   and people-management scope;
+- preserve supported management actions such as organizing, prioritizing,
+  assigning, and tracking team delivery work;
 - surface verified production reliability evidence, such as failures,
   incidents, recovery, latency, throughput, availability, or cost, when the
   supplied sources support it;

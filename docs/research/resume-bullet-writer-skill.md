@@ -39,6 +39,8 @@ Resume Composer without copying the upstream orchestration model.
   action, and supported decision or outcome.
 - Keep one achievement per bullet; do not combine coaching with executive
   prioritization when each belongs to a different outcome.
+- Preserve concrete people-management actions such as organizing, assigning,
+  prioritizing, and tracking work when the evidence supports them.
 - Keep bullet-only review requests bounded and do not rewrite unrelated
   metadata, roles, projects, or sections.
 - Distinguish upstream merge status, downstream fork adoption, and verified

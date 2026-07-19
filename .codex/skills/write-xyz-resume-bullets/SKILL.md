@@ -108,6 +108,8 @@ A precise qualitative result is stronger than an unsupported metric.
   faster, safer, more reliable, or easier to operate after the work.
 - Distinguish individual contribution, team contribution, technical leadership,
   and direct people management.
+- For people leadership, include supported management actions such as
+  organizing, prioritizing, assigning, and tracking work, not only coaching.
 - State technologies only when they explain the method or match a supported
   target criterion. Avoid stack inventories inside a sentence.
 - Prefer concrete system behavior, scale, reliability, delivery, user, cost, or

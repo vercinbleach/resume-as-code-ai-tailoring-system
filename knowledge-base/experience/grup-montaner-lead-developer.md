@@ -133,7 +133,8 @@ size. Those facts are recorded from the user's confirmation.
 ## Reusable resume bullets
 
 - Lead a three-person development team, directly managing and coaching two
-  developers on programming, task decomposition, and consistent engineering
+  developers while using GitHub Projects to organize and assign work and
+  reinforce programming, task decomposition, and consistent engineering
   practices.
 - Designed and ran a bounded agentic refactor workflow with Codex using frozen
   scopes, baseline tests, and isolated functional and structural reviewers

@@ -31,7 +31,7 @@ cv:
         end_date: present
         location: Barcelona, ES
         highlights:
-          - Lead and coach two developers on programming, task decomposition, and consistent engineering practices within a three-person team.
+          - Lead and coach two developers within a three-person team, organizing and assigning work through GitHub Projects while reinforcing programming, task decomposition, and consistent engineering practices.
           - Coordinate a GitFlow-based delivery model with main, develop, work branches, and pull requests, aligning parallel development with controlled integration.
       - company: Grup Montaner
         position: Software Engineer

@@ -100,6 +100,8 @@ including `Custom Agent Harnesses`; do not replace them with generic labels.
 - Do not use job text as evidence about the candidate.
 - Distinguish individual contribution, collaboration, technical leadership,
   and people management.
+- Preserve supported people-management actions such as organizing,
+  prioritizing, assigning, and tracking team delivery work.
 - Keep one achievement per bullet. Do not combine coaching or people
   development with executive prioritization when they describe separate work;
   attach executive collaboration to the process or delivery decision it shaped.
