@@ -51,7 +51,7 @@ cv:
       - name: AI-Powered Mortgage Agent
         highlights:
           - Contributed to a monitored weekly LLM workflow covering public mortgage and loan products from every bank in Spain, combining Python, tool calling, deterministic validation, LLM-as-judge experiments, and human review.
-      - name: "SuiteCRM Open Source | [Open PR](https://github.com/SuiteCRM/SuiteCRM/pull/10766)"
+      - name: "[SuiteCRM](https://github.com/SuiteCRM/SuiteCRM) V8 API Patch | [Open PR](https://github.com/SuiteCRM/SuiteCRM/pull/10766)"
         highlights:
           - Extended SuiteCRM's V8 JSON API with base64 DocumentRevision uploads, extension validation, and MIME metadata; the patch runs in production internally and across downstream forks, with thanks from some users.
     TECHNICAL SKILLS:

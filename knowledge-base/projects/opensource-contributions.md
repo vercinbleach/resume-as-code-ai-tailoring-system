@@ -164,9 +164,9 @@ The contribution must not be described as merged until GitHub shows that status.
 
 ### Reusable resume bullet
 
-- Submitted a DocumentRevision upload patch to SuiteCRM's 5.6k-star upstream;
-  it runs in production internally and across downstream forks, with thanks
-  from some users despite remaining unmerged.
+- Submitted a DocumentRevision upload patch to SuiteCRM's 5.6k-star open-source
+  CRM repository; it runs in production internally and across downstream forks,
+  with thanks from some users despite remaining unmerged.
 - Submitted an upstream SuiteCRM patch that enables DocumentRevision uploads
   through the V8 JSON API, replacing an unreliable SOAP v4.1 workflow with
   validated base64 file handling and metadata persistence.
